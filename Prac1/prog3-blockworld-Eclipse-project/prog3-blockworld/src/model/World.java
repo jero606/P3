@@ -1,8 +1,10 @@
 package model;
 
 /**
+ * Clase World, donde están los atributos del World y sus respectivos métodos
+ * 
  * @author Jerónimo Llorens Vera
- * @author 74371079G Clase World, donde hay atributos y métodos
+ * @author 74371079G
  */
 public class World {
 	// -------------ATRIBUTOS--------------
@@ -17,7 +19,7 @@ public class World {
 	/**
 	 * Constructor que asigna un nombre a un mundo
 	 * 
-	 * @param name
+	 * @param name Nombre del mundo
 	 */
 	public World(String name) {
 		super();
@@ -27,7 +29,7 @@ public class World {
 	/**
 	 * Función que devuelve el nombre del mundo
 	 * 
-	 * @return name
+	 * @return El nombre de mundo
 	 */
 	public String getName() {
 		return name;
@@ -59,7 +61,7 @@ public class World {
 	/**
 	 * Función hashCode()
 	 * 
-	 * @return result
+	 * @return El resultado obtenido del hashCode()
 	 */
 	public int hashCode() {
 		final int prime = 31;
@@ -71,7 +73,7 @@ public class World {
 	/**
 	 * Función que muestra el nombre del mundo
 	 * 
-	 * @return string
+	 * @return El nombre del Mundo
 	 */
 	public String toString() {
 		return getName();

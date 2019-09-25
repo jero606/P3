@@ -1,10 +1,10 @@
 package model;
 
 /**
+ * Clase Location, donde están sus métodos y atributos implementados
  * 
  * @author Jerónimo Llorens Vera
- * @author 74371079G Clase Location, donde están sus métodos y atributos
- *         implementados
+ * @author 74371079G
  *
  */
 public class Location {
@@ -23,6 +23,7 @@ public class Location {
 	 * Variable que representa la asociación direccional con multiplicidad 1
 	 */
 	private World world;
+
 	/**
 	 * Variable x
 	 */
@@ -42,10 +43,10 @@ public class Location {
 	/**
 	 * Constructor que recibe los parámetros
 	 * 
-	 * @param world
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param world Mundo
+	 * @param x     Valor x
+	 * @param y     Valor y
+	 * @param z     Valor z
 	 */
 	public Location(World world, double x, double y, double z) {
 		super();
@@ -58,7 +59,7 @@ public class Location {
 	/**
 	 * Constructor de copia
 	 * 
-	 * @param l
+	 * @param l Valor de una Location
 	 */
 	public Location(Location l) {
 		this.world = l.world;
@@ -70,8 +71,8 @@ public class Location {
 	/**
 	 * Función add que añade Localizaciones del mismo mundo
 	 * 
-	 * @param l
-	 * @return location
+	 * @param l Valor de una Location
+	 * @return La suma de dos localizaciones
 	 */
 	public Location add(Location l) {
 		if (l.world != world)
@@ -88,8 +89,8 @@ public class Location {
 	 * Funcion distance que calcula la distancia entre dos localizaciones del mismo
 	 * mundo
 	 * 
-	 * @param loc
-	 * @return
+	 * @param loc Valor de una Location
+	 * @return La distancia entre 2 localizaciones
 	 */
 	public double distance(Location loc) {
 		if (loc.getWorld() == null || getWorld() == null) {
@@ -182,7 +183,7 @@ public class Location {
 	/**
 	 * Funcion lenght que calcula la longitud de la localizacion
 	 * 
-	 * @return double
+	 * @return La longitud de la localizacion
 	 */
 	public double length() {
 		return Math.sqrt(x * x + y * y + z * z);
@@ -192,8 +193,8 @@ public class Location {
 	 * Funcion multiply que multiplica las coordenadas de la localizacion por el
 	 * factor
 	 * 
-	 * @param factor
-	 * @return
+	 * @param factor Valor de factor
+	 * @return La localizacion con sus coordenadas multiplicadas por el factor
 	 */
 	public Location multiply(double factor) {
 		x *= factor;
@@ -205,8 +206,8 @@ public class Location {
 	/**
 	 * Funcion substrac que resta dos localizaciones del mismo mundo
 	 * 
-	 * @param loc
-	 * @return
+	 * @param loc Valor de Location
+	 * @return La resta de 2 localizaciones
 	 */
 	public Location substract(Location loc) {
 		if (loc.world != world)
@@ -222,7 +223,7 @@ public class Location {
 	/**
 	 * Función zero que pone los atributos x,y,z a 0
 	 * 
-	 * @return Location
+	 * @return La localizacion con sus atributos a 0
 	 */
 	public Location zero() {
 		x = y = z = 0.0;
@@ -232,7 +233,7 @@ public class Location {
 	/**
 	 * Función equals(Object obj)
 	 * 
-	 * @return bool
+	 * @return true si son iguales y false si no lo son
 	 */
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -262,7 +263,7 @@ public class Location {
 	/**
 	 * Funcion hashCode()
 	 * 
-	 * @return result
+	 * @return the result of hashCode
 	 */
 	public int hashCode() {
 		final int prime = 31;
@@ -281,14 +282,16 @@ public class Location {
 	/**
 	 * Funcion toString()
 	 * 
-	 * @return string
+	 * @return El String de Location{world=...}
 	 */
 	public String toString() {
 		String resultado = "Location{world=";
-		
-		if(world == null) resultado += "null";
-		else resultado = resultado += world.getName();
-		
+
+		if (world == null)
+			resultado += "null";
+		else
+			resultado = resultado += world.getName();
+
 		resultado += ",x=" + getX() + ",y=" + getY() + ",z=" + getZ() + "}";
 		return resultado;
 	}
