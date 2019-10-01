@@ -288,7 +288,7 @@ public class Location {
 		String resultado = "Location{world=";
 
 		if (world == null)
-			resultado += "null";
+			resultado += "NULL";
 		else
 			resultado = resultado += world.getName();
 

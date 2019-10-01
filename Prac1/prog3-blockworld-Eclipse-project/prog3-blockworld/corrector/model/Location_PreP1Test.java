@@ -329,7 +329,7 @@ public class Location_PreP1Test {
 		// fail("test the toString() method when applied to a null world location");
 		// PREGUNTAR lo de si hay que establecer el mundo a null
 		le.setWorld(null);
-		assertEquals("toString", "Location{world=null,x=1.1,y=2.2,z=3.3}", le.toString());
+		assertEquals("toString", "Location{world=NULL,x=1.1,y=2.2,z=3.3}", le.toString());
 	}
 
 	/**

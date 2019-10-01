@@ -78,6 +78,6 @@ public class Main1 {
 
 
 		System.out.println("Max. location elevation value: " + Location.UPPER_Y_VALUE);
-		System.out.println("Sea level: " + Location.SEA_LEVEL);					
+		System.out.println("Sea level: " + Location.SEA_LEVEL);			
 	}
 }
